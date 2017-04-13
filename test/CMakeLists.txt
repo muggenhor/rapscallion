@@ -9,6 +9,7 @@ foreach(TEST
   set_target_properties(${PROJECT_NAME}.${TEST} PROPERTIES OUTPUT_NAME ${TEST})
   target_link_libraries(${PROJECT_NAME}.${TEST}
     PRIVATE
+      AwesomeAssert::AwesomeAssert
       RaPsCallion
   )
   add_test(NAME ${TEST} COMMAND ${PROJECT_NAME}.${TEST})
